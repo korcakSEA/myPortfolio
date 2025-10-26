@@ -1,0 +1,37 @@
+@use '../components/base' as *;
+
+@forward './contact';
+@forward './hero';
+@forward './projects';
+@forward './skills';
+@forward './header';
+@forward './footer';
+
+// Element Level Global Styling
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+body{
+  font-family: var(--font-family-primary);
+  padding-top: 4.5rem; /* To prevent content being hidden behind fixed header */
+  background-color: var(--body-bg);
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: block;
+  height: auto;
+}
+
+body, .hero, .projects, .skills, .contact {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+

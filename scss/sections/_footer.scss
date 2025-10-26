@@ -1,0 +1,34 @@
+@use '../components/base' as *;
+
+.footer{
+  padding: var(--spacing-xl) var(--spacing-base);
+  width: 100%;
+  background-color: var(--footer-bg);
+
+  &__container{
+    max-width: 72rem;
+    margin-inline: auto;
+    text-align: center;
+    font-size: var(--font-size-sm);
+
+    & p:first-child{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      color: var(--color-white);
+      line-height: 1.25rem;
+
+      svg{
+        color: var(--color-primary);
+        fill: currentColor;
+      }    
+    }
+
+    & p:last-child{
+      margin-top: var(--spacing-sm);
+      color: var(--color-white-70);
+    }
+  }
+
+}

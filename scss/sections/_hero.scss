@@ -1,0 +1,90 @@
+@use '../components/base' as *;
+
+.main{
+  background: var(--color-bg);
+}
+
+// default is light mode
+.hero {
+  height: 100vh;
+  
+  background: var(--color-bg);
+  background-image: url('../../assets/images/Hero-illustration-left-light.svg'),
+    url('../../assets/images/Hero-illustration-right-light.svg');
+  background-position: left center, right center;
+  background-repeat: no-repeat;
+  background-size: auto 80%, auto 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__content {
+    max-width: 70rem;
+    text-align: center;
+  }
+
+  &__name {
+    @include heading-style();
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-base);
+  }
+
+  &__title {
+    @include title-style();
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  &__description {
+    max-width: 50rem;
+    @include description-style();
+    color: var(--color-secondary-80);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &__cta {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 9999px;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    span svg {
+      width: 20px;
+      height: 20px;
+      color: inherit;
+      margin-left: 8px;
+      @include arrow-move(6px, 1.2s);    
+    }
+    
+    &:hover,
+    &:focus {
+      transform: scale(1.08);
+      background-color: var(--btn-bg)
+    }
+  }
+
+}
+
+
+
+// dark mode styles
+.dark-mode .hero {
+  background-image: url('../../assets/images/Hero-illustration-left-dark.svg'),
+    url('../../assets/images/Hero-illustration-right-dark.svg');
+
+  &__description {
+    color: var(--color-white-70);
+  }
+
+}

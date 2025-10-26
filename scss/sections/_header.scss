@@ -1,0 +1,185 @@
+@use '../components/base' as *;
+
+.header {
+  background-color: var(--color-white-70);
+  position: fixed;
+  // header always sticks to top
+  top: 0;
+  /* so navbar can grow till the edges */
+  width: 100%;
+  min-height: 64px;
+  padding: var(--spacing-base) var(--spacing-xl);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+}
+
+.navbar {
+  max-width: 72rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-base);
+
+  @include respond-to(tablet) {
+    justify-content: space-between;
+  }
+
+  color: var(--color-secondary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+
+
+  &__logo {
+    margin-right: auto;
+    position: relative;
+    z-index: 9999;
+
+    @include respond-to(tablet) {
+      margin-right: 0;
+    }
+
+    order: 0;
+  }
+
+  &__links {
+    // order: 2;
+    /* display: none; property used to position hamburger icon */
+
+    @include respond-to(mobile) {
+      /* Nav-links will take different properties in mobile version, we want them to cover entire screen */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      /* Background property set to position links, better view  */
+      background-color: var(--color-primary-90);
+      /* Make the background view blurred */
+      backdrop-filter: blur(5px);
+      width: 100%;
+      /* to position link in the centers */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /*links positioned but to have transtion effect the links will disappear, when the icon ic clicked it will be displayed  */
+      margin-left: -100%;
+      transition: margin-left 0.3s ease-in-out;
+
+      // links position in mobile
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+      align-items: center;
+
+      &.navbar__links--visible {
+        margin-left: 0;
+      }
+    }
+
+    order: 0;
+    display: flex;
+    column-gap: var(--spacing-base);
+    
+
+
+    // anchor links inside ul>li
+    .nav__link {
+      color: inherit;
+      transition: color 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--navbar-text-hover);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    border-radius: 8px;
+    position: relative;
+    z-index: 9999;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-primary-90);
+      color: var(--color-white);
+    }
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+  }
+
+  #theme-toggle {
+    position: relative;
+    z-index: 9999;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-primary-90);
+      color: var(--color-white);
+    }
+
+    svg {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #moon {
+      opacity: 1;
+    }
+
+    #sun {
+      opacity: 0;
+      position: absolute;
+      top: 55%;
+      left: 55%;
+      translate: -50% -50%;
+    }
+  }
+
+}
+
+
+
+/* When dark mode is active */
+.dark-mode .header{
+  background-color: var(--color-bg-90);
+}
+.dark-mode .header #theme-toggle {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+.dark-mode .header #theme-toggle:hover {
+  background-color: var(--color-primary-90);
+  color: var(--color-white);
+}
+
+.dark-mode .header #theme-toggle #moon {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.dark-mode .header #theme-toggle #sun {
+  opacity: 1;
+  transform: scale(1);
+}
