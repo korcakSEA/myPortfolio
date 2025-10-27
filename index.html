@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <!-- Make website responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO & Metadata -->
+  <meta name="description" content="Korhan Cakir - Front-end Web Developer Portfolio showcasing skills, projects, and contact information.">
   <title>Portfolio</title>
   <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 
 <body>
-
+  <!-- Header starts here -->
   <header class="header">
     <nav class="navbar">
       <!-- Nav logo -->
@@ -41,7 +43,6 @@
             d="M20.63 20a9 9 0 0 1-9.12-8.78A8.61 8.61 0 0 1 14.17 5 10.17 10.17 0 0 0 5 15a10.23 10.23 0 0 0 10.42 10A10.43 10.43 0 0 0 25 18.9a9.3 9.3 0 0 1-4.37 1.1Z">
           </path>
         </svg>
-
         <!-- Sun Icon (for Light Mode) -->
         <svg itemid="icon-sun" id="sun" fill="none" stroke="currentColor" width="28" height="28" viewBox="0 0 30 30"
           xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +59,7 @@
       <div class="hero__content">
         <h1 class="hero__name">Korhan CAKIR</h1>
         <h2 class="hero__title">Front-end Web Developer</h2>
+        <!-- Hero Paragraph -->
         <p class="hero__description">Hey there! I’m a front-end web developer who loves building clean, responsive, and user-friendly websites. I’ve worked with HTML, CSS, JavaScript, and Bootstrap, and I’m currently expanding my skills <em>toward full-stack development</em>. I enjoy solving problems, collaborating with others, and always finding new things to learn in tech.
         </p>
       </div>
@@ -74,6 +76,7 @@
     <section class="skills" id="skills">
       <div class="skills__container">
         <h2 class="skills__header">My Skills</h2>
+        <!-- Regenerating in index.js / Source data: skills.js -->
         <div class="skills__flex skills__flex-js">
         </div>
       </div>
@@ -82,6 +85,7 @@
     <section class="projects" id="projects">
       <div class="projects__container">
         <div class="projects__header">My Projects</div>
+        <!-- Projects regenerating in index.js / Source data: projects.js -->
         <div class="projects__grid projects__grid-js">
           <div class="projects__card-container">
             <div class="projects__card">
@@ -222,6 +226,7 @@
                 hi!</p>
             </div>
             <div class="info-card">
+              <!-- Email and Address Info -->
               <div class="info-card__item">
                 <div class="item-logo">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -253,9 +258,11 @@
                 </div>
               </div>
             </div>
+            <!-- Social Media links -->
             <div class="social-links">
               <h4 class="heading">follow me</h4>
               <div class="links">
+                <!-- Github -->
                 <a class="link__container" href="https://github.com/korcakSEA" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -266,7 +273,8 @@
                     <path d="M9 18c-4.51 2-5-2-7-2"></path>
                   </svg>
                 </a>
-                <a class="link__container" href="https://www.linkedin.com/in/korhan-cakir-b31a38128/" target="_blank">
+                <!-- Linkedin -->
+                <a class="link__container" href="https://www.linkedin.com/in/korhancakir/" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-linkedin" aria-hidden="true">
@@ -293,6 +301,7 @@
                 <label for="message">Message</label>
                 <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
               </div>
+              <!-- Form submit button -->
               <button type="submit"> Send Message
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -322,7 +331,7 @@
       <p>&copy; 2025 All rights reserved.</p>
     </div>
   </footer>
-
+  <!-- Script Section -->
   <script src="./dist/script/skills.js"></script>
   <script src="./dist/script/projects.js"></script>
   <script src="./dist/script/index.js"></script>

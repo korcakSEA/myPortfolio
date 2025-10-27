@@ -51,7 +51,7 @@ projects.forEach(project => {
           <div class="projects__card-container">
             <div class="projects__card">
               <div class="projects__card-front">
-                <img src="${project.image}" alt="Project image">
+                <img src="${project.image}" alt="Screenshot of ${project.name}" loading="lazy">
                 <div>
                   <h3>${project.name}</h3>
                   <p>${project.purpose}</p>
