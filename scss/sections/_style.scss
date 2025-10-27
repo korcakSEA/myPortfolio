@@ -17,11 +17,14 @@
   
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: var(--font-family-primary);
   padding-top: 4.5rem; /* To prevent content being hidden behind fixed header */
   background-color: var(--body-bg);
-  scroll-behavior: smooth;
 }
 
 img {
