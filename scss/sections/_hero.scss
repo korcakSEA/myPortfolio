@@ -41,6 +41,7 @@
     @include description-style();
     color: var(--color-secondary-80);
     margin-bottom: var(--spacing-xl);
+    padding-inline: var(--spacing-sm);
   }
 
   &__cta {

@@ -511,6 +511,7 @@
   letter-spacing: 0;
   color: var(--color-secondary-80);
   margin-bottom: var(--spacing-xl);
+  padding-inline: var(--spacing-sm);
 }
 .hero__cta {
   text-decoration: none;
