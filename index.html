@@ -288,19 +288,20 @@
           </div>
           <!-- Right Side - Form -->
           <div class="contact__form">
-            <form class="form" novalidate>
+            <form class="form" action="https://formsubmit.co/korhancakir@gmail.com" method="POST" novalidate>
               <div class="form__layout">
                 <label for="name">Name</label>
-                <input type="text" id="name" value name="name" placeholder="Your name" required>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
               </div>
               <div class="form__layout">
                 <label for="email">Email</label>
-                <input type="email" value name="email" id="email" placeholder="your.email@example.com">
+                <input type="email" name="email" id="email" placeholder="your.email@example.com">
               </div>
               <div class="form__layout">
                 <label for="message">Message</label>
                 <textarea name="message" id="message" rows="5" placeholder="Your message..."></textarea>
               </div>
+              <input type="hidden" name="_next" value="thank-you.html">
               <!-- Form submit button -->
               <button type="submit"> Send Message
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
